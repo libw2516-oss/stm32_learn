@@ -1,7 +1,11 @@
 .\objects\led.o: Hardware\LED.c
 .\objects\led.o: .\start\stm32f10x.h
 .\objects\led.o: .\start\core_cm3.h
+<<<<<<< HEAD
 .\objects\led.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+=======
+.\objects\led.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+>>>>>>> e5782775715c6b455152be2bd32324d8c3e13fd0
 .\objects\led.o: .\start\system_stm32f10x.h
 .\objects\led.o: .\User\stm32f10x_conf.h
 .\objects\led.o: .\Library\stm32f10x_adc.h
