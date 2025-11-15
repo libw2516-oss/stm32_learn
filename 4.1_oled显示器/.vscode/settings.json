@@ -1,7 +1,12 @@
 {
     "files.associations": {
         "stm32f10x.h": "c",
+<<<<<<< HEAD
+        "delay.h": "c",
+        "oled_font.h": "c"
+=======
         "delay.h": "c"
+>>>>>>> e5782775715c6b455152be2bd32324d8c3e13fd0
     },
     "C_Cpp.default.compilerPath": ""
 }
