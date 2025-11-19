@@ -10,5 +10,6 @@
         "timer.h": "c",
         "oled.h": "c"
     },
-    "C_Cpp.default.compilerPath": ""
+    "C_Cpp.default.compilerPath": "",
+    "C_Cpp.errorSquiggles": "disabled"
 }

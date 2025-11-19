@@ -12,7 +12,8 @@
                 "E:\\Keil_v5\\ARM\\ARMCC\\include",
                 "E:\\Keil_v5\\ARM\\ARMCC\\include\\rw",
                 "${workspaceFolder}/System",
-                "${workspaceFolder}/Hardware"
+                "${workspaceFolder}/Hardware",
+                "${workspaceFolder}/start"
             ],
             "defines": [
                 "USE_STDPERIPH_DRIVER",
