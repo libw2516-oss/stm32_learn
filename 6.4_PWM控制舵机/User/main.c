@@ -6,7 +6,7 @@
 #include "KEY.h"
 
 uint8_t KeyNum;//可以使用extern在其他文件声明这个变量即可跨文件使用
-float angle = -90;
+int8_t angle = 0;
 
 int main(void){
 
