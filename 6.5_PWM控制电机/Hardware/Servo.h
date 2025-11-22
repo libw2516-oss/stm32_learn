@@ -1,8 +1,0 @@
-#ifndef __SERVO_H__
-#define __SERVO_H__
-
-void Servo_Init(void);
-void Servo_SetAngle(int16_t angle);
-
-
-#endif

@@ -9,15 +9,15 @@ void PWM_Init(void){
     TIM_InternalClockConfig(TIM2);
 
     GPIO_InitTypeDef GPIO_InitStructure;
-    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_1; // 不是随便指定，要看TIM2的CH1对应哪个引脚，这里是PA1
-    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP; // 只有设置复用推挽输出模式才能将控制权交给片上外设，才能输出PWM波形
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_2;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
     GPIO_Init(GPIOA, &GPIO_InitStructure);
     
     TIM_TimeBaseInitTypeDef TIM_TimeBaseStructure; //72000000
-    TIM_TimeBaseStructure.TIM_Prescaler = 72 - 1;
+    TIM_TimeBaseStructure.TIM_Prescaler = 18 - 1;
     TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;
-    TIM_TimeBaseStructure.TIM_Period = 20000 - 1;
+    TIM_TimeBaseStructure.TIM_Period = 100 - 1;
     TIM_TimeBaseStructure.TIM_ClockDivision = TIM_CKD_DIV1;
     TIM_TimeBaseStructure.TIM_RepetitionCounter = 0x00;
     TIM_TimeBaseInit(TIM2, &TIM_TimeBaseStructure);
@@ -32,7 +32,7 @@ void PWM_Init(void){
     TIM_OCInitStructure.TIM_OCNPolarity = TIM_OCNPolarity_High; //互补输出随便填，TIM2没有互补输出
     TIM_OCInitStructure.TIM_OCIdleState = TIM_OCIdleState_Reset; //普通项目一般不用，保持默认
     TIM_OCInitStructure.TIM_OCNIdleState = TIM_OCNIdleState_Reset; //普通项目一般不用，保持默认
-    TIM_OC2Init(TIM2, &TIM_OCInitStructure); //初始化TIM2通道1
+    TIM_OC3Init(TIM2, &TIM_OCInitStructure); //初始化TIM2通道1
 
     TIM_Cmd(TIM2, ENABLE); // 使能TIM2
 
@@ -48,10 +48,10 @@ void PWM_Init(void){
     */
 }
 
-void PWM_SetCompare2(uint16_t i)
+void PWM_SetCompare3(uint16_t i)
 {
 
-    TIM_SetCompare2(TIM2, i); // 设置比较寄存器的值，占空比50%
+    TIM_SetCompare3(TIM2, i); // 设置比较寄存器的值，占空比50%
 
 }
 

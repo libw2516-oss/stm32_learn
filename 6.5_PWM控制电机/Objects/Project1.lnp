@@ -35,7 +35,7 @@
 ".\objects\lightsensor.o"
 ".\objects\oled.o"
 ".\objects\pwm.o"
-".\objects\servo.o"
+".\objects\motor.o"
 --strict --scatter ".\Objects\Project1.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
