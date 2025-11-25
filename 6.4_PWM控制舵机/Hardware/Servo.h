@@ -2,7 +2,7 @@
 #define __SERVO_H__
 
 void Servo_Init(void);
-void Servo_SetAngle(float angle);
+void Servo_SetAngle(int8_t angle);
 
 
 #endif
