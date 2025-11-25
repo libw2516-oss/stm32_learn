@@ -9,6 +9,7 @@ int main(void){
 
 	OLED_Init();
 	PWM_Init();
+	IC_Init();
 	OLED_ShowString(1, 1, "Freq:00000Hz");
 	PWM_SetPrescaler(720 - 1); // 设置预分频器，使计数器时钟为72MHz/720=100kHz
 	PWM_SetCompare1(50);

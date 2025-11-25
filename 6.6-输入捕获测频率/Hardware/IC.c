@@ -16,7 +16,7 @@ void IC_Init(void){
     TIM_TimeBaseStructure.TIM_Prescaler = 72 - 1;//计算频率，取大频率然后计数，基准频率除以计数值即为最终频率
     TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;
     TIM_TimeBaseStructure.TIM_Period = 65536 - 1; //尽量取大避免计数溢出
-    TIM_TimeBaseStructure.TIM_ClockDivision = TIM_CKD_DIV2;
+    TIM_TimeBaseStructure.TIM_ClockDivision = TIM_CKD_DIV1;
     TIM_TimeBaseStructure.TIM_RepetitionCounter = 0x00;
     TIM_TimeBaseInit(TIM3, &TIM_TimeBaseStructure);
 
@@ -36,5 +36,5 @@ void IC_Init(void){
 
 uint32_t IC_Get_Freq(void)
 {
-    return 1000000 / TIM_GetCounter(TIM3); //返回计数值，结合预分频器和时基频率可以计算出输入信号的频率
+    return 1000000 / TIM_GetCapture1(TIM3); //返回计数值，结合预分频器和时基频率可以计算出输入信号的频率
 }
