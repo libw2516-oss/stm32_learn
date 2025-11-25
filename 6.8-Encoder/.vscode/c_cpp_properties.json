@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "C:/Keil_v5/ARM/ARMCC/include",
+                "C:/Keil_v5/ARM/ARMCLANG/include"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE",
+                "USE_STDPERIPH_DRIVER",
+                "STM32F10X_MD",
+                "__CC_ARM"
+            ],
+           "compilerPath": "",             // 把这里清空！不要用 cl.exe
+            "cStandard": "c99",             // 建议强制用 c99
+            "cppStandard": "c++11",
+            "intelliSenseMode": "gcc-arm"   // 改成 gcc-arm 模式
+        }
+    ],
+    "version": 4
+}
