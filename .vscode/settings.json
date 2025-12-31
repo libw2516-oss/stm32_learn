@@ -1,5 +1,15 @@
 {
     "files.associations": {
-        "stm32f10x.h": "c"
-    }
+        "stm32f10x.h": "c",
+        "delay.h": "c",
+        "limits": "cpp",
+        "memory": "cpp",
+        "stm32f10x_tim.h": "c",
+        "stm32f10x_rcc.h": "c",
+        "stm32f10x_conf.h": "c",
+        "timer.h": "c",
+        "oled.h": "c"
+    },
+    "C_Cpp.default.compilerPath": "",
+    "C_Cpp.errorSquiggles": "disabled"
 }
