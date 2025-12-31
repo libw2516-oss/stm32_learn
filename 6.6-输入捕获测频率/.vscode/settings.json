@@ -1,0 +1,7 @@
+{
+    "C_Cpp.default.compilerPath": "cl.exe",
+    "C_Cpp.errorSquiggles": "enabled",
+    "files.associations": {
+        "stm32f10x.h": "c"
+    }
+}
